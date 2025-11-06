@@ -44,6 +44,7 @@ function App() {
       <Header tasks={filteredTasks} />
       <div className="container">
         <section className="left-navigation-section">
+          {/* I use all tasks, and not the filtered tasks, because your inbox is supposed to consider ALL items */}
           <LeftNavigation tasks={tasks} />
         </section>
         <section className="main-content-section">
