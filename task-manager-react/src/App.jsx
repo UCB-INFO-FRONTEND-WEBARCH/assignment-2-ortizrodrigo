@@ -1,7 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import { starterTasks } from "./data/starter-tasks";
-import { Header, TaskList, TaskForm } from "./components";
+import { Header, TaskList, TaskForm, LeftNavigation } from "./components";
 
 function App() {
   const [tasks, setTasks] = useState(starterTasks);
@@ -44,7 +44,7 @@ function App() {
       <Header tasks={filteredTasks} />
       <div className="container">
         <section className="left-navigation-section">
-          <h1>TODO</h1>
+          <LeftNavigation tasks={tasks} />
         </section>
         <section className="main-content-section">
           <TaskForm onAddTask={addTask} />
